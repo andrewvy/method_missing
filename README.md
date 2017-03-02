@@ -11,21 +11,29 @@ defmodule Dog do
   use MethodMissing
 
   def method_missing(func, _args) do
-    func
-    |> Atom.to_string()
-    |> case do
-      "bark" -> "WOOF"
-      _ -> "?"
+    func_name = Atom.to_string(func)
+
+    cond do
+      Regex.match?(~r/bark|woof/, func_name) -> "WOOF"
+      true -> "?"
     end
   end
 end
 
 Dog.bark()
 > "WOOF"
+Dog.woof()
+> "WOOF"
 Dog.meow()
 > "?"
 
 ```
+
+## Why?
+
+`¯\_(ツ)_/¯`
+
+If you like ~weird~ great things, check out https://github.com/wojtekmach/oop
 
 ## Installation
 
