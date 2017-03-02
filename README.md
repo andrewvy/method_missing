@@ -33,7 +33,7 @@ Dog.meow()
 
 `¯\_(ツ)_/¯`
 
-If you like ~weird~ great things, check out https://github.com/wojtekmach/oop
+If you like ~~weird~~ great things, check out https://github.com/wojtekmach/oop
 
 ## Installation
 
